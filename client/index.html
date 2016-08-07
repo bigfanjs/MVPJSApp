@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> MVP </title>
+    <style type="text/css">
+      div#container {
+        text-align: center;
+      }
+      thead tr th {
+        text-align: center;
+      }
+
+      .update-blog, .cancel {
+        display: none;
+      }
+    </style>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script type="text/javascript" src="js/externals/qunit.js"></script>
+    <script type="text/javascript" src="js/externals/underscore-min.js"></script>
+    <script type="text/javascript" src="js/externals/jquery.js"></script>
+    <script type="text/javascript" src="js/externals/backbone-min.js"></script>
+    <script type="text/javascript" src="js/MVP.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <h1>An MVP App</h1>
+      <table class="table">
+        <thead class="blogs-actions" >
+          <tr>
+            <th>Author</th>
+            <th>Title</th>
+            <th>Url</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody class="blogs-list" ></tbody>
+      </table>
+    </div>
+
+    <script type="text/template" class="user-options-template">
+      <td><input class="form-control author"></td>
+      <td><input class="form-control title"></td>
+      <td><input class="form-control url"></td>
+      <td><button class="btn btn-primary add-blog">Add</button></td>
+    </script>
+
+    <script type="text/template" class="blog-list-template">
+      <td><span class="author"><%= author %></span></td>
+      <td><span class="title"><%= title %></span></td>
+      <td><span class="url"><%= url %></span></td>
+      <td>
+        <button class="btn btn-warning edit-blog" >Edit</button>
+        <button class="btn btn-danger delete-blog" >Delete</button>
+      </td>
+    </script>
+
+    <script type="text/template" class="blog-editor-template">
+      <td><input class="form-control author" value="<%= author %>"></td>
+      <td><input class="form-control title" value="<%= title %>"></td>
+      <td><input class="form-control url" value="<%= url %>"></td>
+      <td>
+        <button class="btn btn-success update-blog" >Update</button>
+        <button class="btn btn-danger cancel" >Cancel</button>
+      </td>
+    </script>
+  </body>
+</html>
