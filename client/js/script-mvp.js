@@ -1,17 +1,3 @@
-/************************************************************************************************
-- Disadvantages:
-- + it's a bit complicated to build it yourself. 
-- + it requires a basic understanding of MVP design pattern. 
-- + it requires a basic understanding of native JS API.
-- Advantages:
-- + your code would be more modulare.
-- + it's less painfull to debug.
-- + it's more testable(very easy to mock the view).
-- + the view is much more decoupled than the presenter.
--__|| A far bit enhanced version of the app by manually implementing MVP desgin pattern ||__*/
-
-'use strict';
-
 const
   mainEl = '.blogs-list',
   create = Object.create,
